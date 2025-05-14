@@ -1,11 +1,12 @@
 package school.hei.PatrimonyManager;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
-public class MaterialGood {
+public class MaterialGood extends Possession {
     private String name;
-    private Long amount;
     private Long value;
     private int annualValueLoss; /// in percent
 }
