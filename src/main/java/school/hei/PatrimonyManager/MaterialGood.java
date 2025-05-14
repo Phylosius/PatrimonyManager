@@ -5,7 +5,7 @@ import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class MaterialGood extends Possession {
+public final class MaterialGood extends Possession {
     private String name;
     private Long value;
     private int annualValueLoss; /// in percent

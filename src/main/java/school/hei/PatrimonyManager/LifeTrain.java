@@ -7,7 +7,7 @@ import java.time.Duration;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class LifeTrain extends Possession{
+public final class LifeTrain extends Possession{
     private String name;
     private String duration;
     private Money moneySource;

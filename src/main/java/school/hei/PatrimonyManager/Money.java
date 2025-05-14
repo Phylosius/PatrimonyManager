@@ -5,6 +5,6 @@ import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class Money extends Possession {
+public final class Money extends Possession {
     private MoneyType type;
 }
