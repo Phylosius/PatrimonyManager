@@ -5,5 +5,5 @@ import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public final class MaterialGood extends DepreciablePossession {
+public sealed class DepreciablePossession extends Possession permits MaterialGood, BankAccount{
 }
