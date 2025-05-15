@@ -6,5 +6,5 @@ import lombok.EqualsAndHashCode;
 @EqualsAndHashCode(callSuper = true)
 @Data
 public final class Money extends Possession {
-    private MoneyType type;
+    private Currency currency = new Currency("USD", 1d);
 }
