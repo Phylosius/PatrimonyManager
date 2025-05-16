@@ -6,6 +6,6 @@ import java.time.Duration;
 
 @Data
 public class DepreciationRate {
-    private final int rate;
+    private final Double rate;
     private Duration period;
 }
