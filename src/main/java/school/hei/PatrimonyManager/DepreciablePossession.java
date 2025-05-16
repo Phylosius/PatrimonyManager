@@ -1,16 +1,22 @@
 package school.hei.PatrimonyManager;
 
-import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import java.time.Duration;
 import java.time.LocalDate;
 
 @EqualsAndHashCode(callSuper = true)
-@Data
 public sealed class DepreciablePossession extends Possession permits MaterialGood, BankAccount{
     private LocalDate lastDepreciationDate;
     private final DepreciationRate depreciationRate;
+
+    public DepreciablePossession(String name, Money value,
+                                 LocalDate lastDepreciationDate, DepreciationRate depreciationRate)
+    {
+        super(name, value);
+        this.lastDepreciationDate = lastDepreciationDate;
+        this.depreciationRate = depreciationRate;
+    }
 
     public Money getValueAt(LocalDate date) {
         Duration depreciationPeriod = depreciationRate.getPeriod();
